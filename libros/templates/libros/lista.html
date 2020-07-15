@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if libros %}
+    <h3>Libros</h3>
+    <ul>
+        {% for libro in libros%}
+        <li> <a href="{% url 'detalle' libro.id%}">{{ libro.tittle }}</a></li>
+    </ul>
+{% else %}
+    <h3>No existen libros</h3>
+{% endif%}
+</body>
+</html>

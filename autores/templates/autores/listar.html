@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if autores %}
+    <h3>Lista de autores</h3>
+    <ul>
+        {% for autor in autores %}
+            <li>{{ autor.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No existen autores</h3>
+{% endif %}
+</body>
+</html>
